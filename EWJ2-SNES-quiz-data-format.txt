@@ -34,7 +34,7 @@ QUIZ DATA [Lenght = 8176 (Dec)]
 FOOTER DATA [Lenght = 292 (Dec)]
 73 *
 {
-	4 Bytes = Pointer of the Question in the Rom (Little Endian)
+	4 Bytes = Pointer of the Question in the Rom (Little Endian) [XX XX C3 00] (Despise the confusion, the Data Offset is correct: 3A B3 03 00 (real pointer) is turned into 3A B3 C3 00 (pointer in the footer))
 }
 
 ==============================================================
