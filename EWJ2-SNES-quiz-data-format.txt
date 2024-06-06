@@ -1,0 +1,50 @@
+EARTHWORM JIM 2 - SNES/SUPER NINTENDO ENTERTAINMENT SYSTEM - QUIZ DATA FORMAT
+
+Location in Rom: 3B33A - 3D44E (Hex)
+Lenght: 8468 (Dec)
+
+QUIZ DATA [Lenght = 8176 (Dec)]
+73 *
+{
+	Question [Lenght: Varies]
+	{ 
+	1 Byte = Right Proposition (15 / 16 / 17)
+	0-2 Bytes = 07 (Linebreak)
+	2 Bytes = 01 XX (Start - XX = Position (Min = 03) )
+	x Bytes =  Question
+	{3 bytes = 07 01 XX (Line Break - XX = Position (Min = 03) )
+	}
+
+	1-2 Bytes = 07 Repeated (Line Break between Question and Propositions)
+
+	Proposition [Lenght = Varies]
+	3 * 
+	{
+	2 Bytes = 07 07
+	1 Byte = 01
+	1 Byte = Position (Min = 0B, Best is 0C)
+	1 Byte = Button Sprites (18 = Y , 19 = B, 1A = A)
+	x Bytes = Proposition
+	{3 bytes = 07 01 XX (Line Break - XX =Position)}
+	}
+
+1 Byte: 00 (End)
+}
+
+FOOTER DATA [Lenght = 292 (Dec)]
+73 *
+{
+	4 Bytes = Pointer of the Question in the Rom (Little Endian)
+}
+
+==============================================================
+
+Question-Proposition lenght average is 112 bytes (8176 divided by 73)
+Quiz Data can be shortened but has to be filled to get the same lenght
+
+The recommanded Question Lenght for each line is between 26 - 28 characters
+The recommanded Proposition Lenght for each line is between 12 - 16 characters (12 If you won't to over lay with the quiz machine)
+
+Max Lines used is 15 (Based on "Does Jim's mother approves of the girls he dates?"), thus max is 6 % symbols
+
+Outside the max lenght change, there aren't much differences from the Sega Genesis version. I believe the base data is the SNES one as it has the shortest max lenght.
