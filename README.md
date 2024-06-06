@@ -23,4 +23,4 @@ Line break with **%** and **the number after the question is the right propositi
 The successor of the tool for Sega Genesis. Even if the Sega Genesis is best for display and data size, I make the SNES version not only for the similar quiz data format but because I believe the same mod for both versions is possible, as much you translate an idea as a text or drawing. I hesitate to fusion it with the MSX tool but decide to seperated it to avoid confusion.
 
 ## Links
-[EWJ-quiz-builder-MSX](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX)
+[EWJ2-quiz-builder-MSX](https://github.com/zigaudrey/EWJ2-quiz-builder-MSX)
